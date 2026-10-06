@@ -1,4 +1,6 @@
 
+top -H -b -d 10 -n 2 > top.txt
+
 awk 'BEGIN { n=0 } /^top -/ { n++ } n >= 2' top.txt > filtered_output.txt
 
 awk '
